@@ -1,0 +1,1 @@
+// Mock file used in place of images and other static object files during testing
