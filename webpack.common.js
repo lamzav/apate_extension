@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        popup: path.resolve('src/popup/popup.tsx')
+        popup: path.resolve('src/popup/Popup.tsx')
     },
     module: {
         rules: [
@@ -13,10 +13,6 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
-            },
-            {
-                test: /\.css$/i,
-                use: ['css-loader'],
             },
             {
                 test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)$/,
@@ -54,8 +50,10 @@ module.exports = {
 
 function getHtmlPlugins(chunks) {
     return chunks.map(chunk => new HtmlPlugin({
-        title: 'React Extension',
+        title: 'Apate Extension',
         filename: `${chunk}.html`,
         chunks: [chunk],
+        inject: true,
+        minify: false
     }))
 }
