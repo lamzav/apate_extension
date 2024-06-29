@@ -1,7 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import InputClaim, { MAX_CHAR_COUNT } from "../../src/popup/InputClaim";
+import InputClaim, {
+  MAX_CHAR_COUNT,
+} from "../../../src/popup/input_claim/InputClaim";
 
 test("renders without crashing", () => {
   render(<InputClaim />);
@@ -17,7 +19,10 @@ test("renders the textarea element", () => {
   render(<InputClaim />);
   const inputTextarea = screen.getByTestId("claim-text");
   expect(inputTextarea).toBeInTheDocument();
-  expect(inputTextarea).toHaveAttribute("placeholder", "Enter your claim here");
+  expect(inputTextarea).toHaveAttribute(
+    "placeholder",
+    expect.stringContaining("Enter your claim here")
+  );
 });
 
 test("textarea updates its value on change", () => {

@@ -1,0 +1,51 @@
+.helpModal {
+  background-color: var(--fg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: 1rem auto 0;
+}
+
+.helpPopup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.helpTitle {
+  align-self: center;
+  color: var(--text-color-muted);
+  font-size: var(--default-font-size);
+}
+
+.helpText {
+  color: var(--default-text-color);
+  font-weight: 400;
+}
+
+.optionText {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.noteText {
+  color: var(--text-color-muted);
+  font-size: 0.75rem;
+}
+
+.closeButtonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.closeButton,
+.closeButton:visited {
+  background-color: var(--error-color);
+}
+
+.closeButton:hover,
+.closeButton:active {
+  background-color: var(--error-color-dark);
+  color: var(--default-text-color);
+}

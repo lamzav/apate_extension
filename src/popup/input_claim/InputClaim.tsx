@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 import * as styles from "./InputClaim.module.css";
+import Help from "./Help";
 
 export const MAX_CHAR_COUNT = 400;
 
@@ -39,7 +38,8 @@ function InputClaim() {
         data-testid="claim-text"
         maxLength={MAX_CHAR_COUNT}
         rows={12}
-        placeholder="Enter your claim here"
+        autoFocus={true}
+        placeholder="Enter your claim here (e.g. 'The Earth is flat')"
         value={claimText}
         onChange={handleTextChange}
         onFocus={handleFocus}
@@ -59,9 +59,7 @@ function InputClaim() {
         >
           Verify
         </button>
-        <button className="icon-button" title="Help">
-          <FontAwesomeIcon icon={faCircleQuestion} />
-        </button>
+        <Help></Help>
       </div>
     </div>
   );

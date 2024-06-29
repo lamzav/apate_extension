@@ -1,6 +1,6 @@
 /* GOOGLE FONTS */
 
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap");
 
 /* CUSTOM PROPERTIES */
 
@@ -10,7 +10,6 @@
   custom properties are always defined in :root (not in html).
 */
 :root {
-  --title-font-family: "Work Sans";
   --default-font-family: "Work Sans";
   /*
     16px is the default font size set by browsers in the html tag.
@@ -21,19 +20,19 @@
   */
   --default-font-size: 0.875rem;
   --default-text-color: white;
-  --text-color-muted: #AFAFAF;
+  --text-color-muted: #afafaf;
   --button-text-color: black;
 
-  --primary-color: #04BF99;
+  --primary-color: #04bf99;
   --primary-color-dark: #00a072;
-  --secondary-color: #84D2E1;
+  --secondary-color: #84d2e1;
   --secondary-color-dark: #38b3cb;
-  --error-color: #FFB4AB;
-  --error-color-dark: #93000A;
+  --error-color: #ffb4ab;
+  --error-color-dark: #93000a;
 
   --bg-color: #121212;
   --fg-color: #202020;
-  --neutral-color: #C4C4C4;
+  --neutral-color: #c4c4c4;
 }
 
 /* RESET */
@@ -58,6 +57,7 @@ p {
 h1,
 h2,
 h3 {
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -237,6 +237,7 @@ a:active {
   display: flex;
   flex-direction: column;
   color: var(--bg-color);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 main {

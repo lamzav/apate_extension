@@ -1,5 +1,5 @@
 import React from "react";
-import InputClaim from "./InputClaim";
+import InputClaim from "./input_claim/InputClaim";
 
 function Main() {
   return (
