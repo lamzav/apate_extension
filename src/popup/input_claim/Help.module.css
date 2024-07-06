@@ -15,12 +15,9 @@
 
 .helpTitle {
   align-self: center;
-  color: var(--text-color-muted);
-  font-size: var(--default-font-size);
 }
 
 .helpText {
-  color: var(--default-text-color);
   font-weight: 400;
 }
 

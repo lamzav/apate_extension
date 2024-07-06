@@ -1,0 +1,10 @@
+.footerLink,
+.footerLink:visited {
+  color: var(--text-color-muted);
+  font-size: 0.75rem;
+}
+
+.footerLink:hover,
+.footerLink:active {
+  color: var(--primary-color);
+}

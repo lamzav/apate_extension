@@ -19,6 +19,7 @@
     For example, if you want 20px, then set the size to 20/16 = 1.25rem.
   */
   --default-font-size: 0.875rem;
+  --header-font-size: 0.9375rem;
   --default-text-color: white;
   --text-color-muted: #afafaf;
   --button-text-color: black;
@@ -50,6 +51,7 @@ h1,
 h2,
 h3,
 p {
+  color: var(--default-text-color);
   margin: 0;
 }
 
@@ -58,6 +60,7 @@ h1,
 h2,
 h3 {
   font-weight: 500;
+  font-size: var(--header-font-size);
   line-height: 1;
 }
 
@@ -224,7 +227,7 @@ body {
 
 a,
 a:visited {
-  color: white;
+  color: var(--primary-color);
 }
 
 a:hover,
@@ -242,5 +245,10 @@ a:active {
 
 main {
   width: 100%;
-  margin-bottom: 1.25rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 0.625rem;
 }
